@@ -1,0 +1,17 @@
+---
+- name: Install Apache
+  when: web-software == "apache"
+  yum: name={{ item }} state=latest
+  with_items:
+   - httpd
+   - php
+   - php-mysql
+   - php-mbstring
+   - mod_ssl
+   - php-mhash
+   - php-gd
+
+  service:
+    name: httpd
+    state: started
+    enabled: yes

@@ -1,0 +1,6 @@
+- name: Install WEB Stack on CentOS 7 System
+  hosts: localhost
+  roles:
+    - web-service
+    - db-service
+    - ftp-service

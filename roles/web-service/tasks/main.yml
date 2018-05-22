@@ -1,0 +1,7 @@
+- name: Install apache
+  include: apache.yml
+  when: web-software == "apache"
+
+- name: Install Nginx
+  include: nginx.yml
+  when: web-software == "nginx"
