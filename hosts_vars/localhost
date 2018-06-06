@@ -1,2 +1,2 @@
-web-software: "{{ web-software }}" ## Software used for web service. Apache or Nginx
-code-language: "{{code-language}}" ## code language that will be installed
+web_software: "{{ web_software }}" ## Software used for web service. Apache or Nginx
+code_language: "{{code_language}}" ## code language that will be installed

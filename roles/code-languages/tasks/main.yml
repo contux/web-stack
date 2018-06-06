@@ -1,25 +1,25 @@
 - name: Install apache
   include: php54.yml
-  when: code-language == "php54"
+  when: code_language == "php54"
 
 - name: Install apache
   include: php56.yml
-  when: code-language == "php56"
+  when: code_language == "php56"
 
 - name: Install apache
   include: php57.yml
-  when: code-language == "php57"
+  when: code_language == "php57"
 
 - name: Install apache
   include: php58.yml
-  when: code-language == "php58"
+  when: code_language == "php58"
 
 - name: Install apache
   include: php70.yml
-  when: code-language == "php70"
+  when: code_language == "php70"
 
 - name: Install apache
   include: php72.yml
-  when: code-language == "php72"  
+  when: code_language == "php72"  
 
 
