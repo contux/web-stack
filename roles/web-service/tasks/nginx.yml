@@ -6,35 +6,13 @@
     gpgcheck: no
     enabled: yes
 
-
 - name: Install web and PHP
   yum: name={{ item }} state=latest
   with_items:
    - nginx
-   - php-fpm 
-   - php-cli 
-   - php-mysql 
-   - php-gd 
-   - php-ldap 
-   - php-odbc 
-   - php-pdo 
-   - php-pecl-memcache 
-   - php-pear 
-   - php-mbstring 
-   - php-xml 
-   - php-xmlrpc 
-   - php-mbstring 
-   - php-snmp 
-   - php-soap
-   - epel-release
-   - @Development Group
-
-
-- name: Config php.ini
-  shell: echo "cgi.fix_pathinfo=0" >> /etc/php.ini
 
 - name: Start services
   service: name={{ item }} state=restarted enabled=yes
   with_items:
     - nginx
-    - php-fpm
+
