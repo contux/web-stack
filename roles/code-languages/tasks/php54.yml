@@ -1,0 +1,22 @@
+- name: Install PHP 5.4
+  yum: name={{ item }} state=present
+  with_items:
+    - php
+    - php-bcmath
+    - php-cli
+    - php-common
+    - php-dba
+    - php-devel
+    - php-gd
+    - php-ldap
+    - php-mbstring
+    - php-mysql
+    - php-mysqlnd
+    - php-odbc
+    - php-pdo 
+    - php-pear
+    - php-pgsql
+    - php-soap
+    - php-xml
+    - php-xmlrpc
+

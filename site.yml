@@ -1,6 +1,10 @@
-- name: Install WEB Stack on CentOS 7 System
+- name: Include host on ansible inventory
   hosts: localhost
+  connection: local
+  shell: echo "{{ipaddress}}" >> /etc/ansible/hosts
+
+- name: Install WEB Stack on CentOS 7 System
+  hosts: "{{ipaddress}}"
   roles:
-    - web-service
-    - db-service
-    - ftp-service
+    - web-services
+    - code-languages
