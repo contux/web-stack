@@ -6,7 +6,7 @@
     gpgcheck: no
     enabled: yes
 
-- name: Install web and PHP
+- name: Install Nginx
   yum: name={{ item }} state=latest
   with_items:
    - nginx
