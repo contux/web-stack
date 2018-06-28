@@ -1,6 +1,7 @@
 
 - name: Install WEB Stack on CentOS 7 System
   hosts: "{{ipaddress}}"
+  remote_user: root
   roles:
     - web-service
     - code-languages
