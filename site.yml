@@ -4,4 +4,5 @@
   remote_user: root
   roles:
     - web-service
+    - db-service
     - code-languages

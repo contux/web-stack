@@ -1,0 +1,19 @@
+- name: Install MySQL repository
+  yum: name={{ item }} state=present
+  with_items:
+    - https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
+    - mysql-server
+
+
+- name: Start MySQL service
+  service:
+    name: mysqld
+    state: started
+    enabled: yes
+
+- name: Configuring client to login with root password
+  shell: 
+    sqlpasswd=$(grep password /var/log/mysqld.log | rev | awk {'print$1'} | rev) && 
+    echo "[client]" >> /root/.my.cnf &&
+    echo 'user="root"' >> /root/.my.cnf &&
+    echo "password='$sqlpasswd'" >> /root/.my.cnf

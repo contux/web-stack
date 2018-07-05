@@ -1,2 +1,3 @@
 web_software: "{{ web_software }}" ## Software used for web service. Apache or Nginx
 code_language: "{{code_language}}" ## code language that will be installed
+db_software: "{{db_software}}" ## Engine used for databases

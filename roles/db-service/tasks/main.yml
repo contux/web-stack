@@ -1,0 +1,7 @@
+- name: Install MariaDB
+  include: mariadb.yml
+  when: db_software == "mariadb"
+
+- name: Install MySQL
+  include: mysql.yml
+  when: db_software == "mysql"
